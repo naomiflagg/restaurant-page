@@ -1,30 +1,75 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  color: #4f4846;
+  text-align: center;
   background: linear-gradient(to right bottom, #e8cebf, #fdf8f5); }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #4f4846;
-  background-color: #fdf8f5; }
+  margin-bottom: 50px;
+  background-color: #fdf8f5;
+  box-shadow: 5px 5px 23px 3px rgba(185, 156, 156, 0.97); }
   header h1 {
     padding: 30px;
     font-style: italic;
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 700; }
   header ul {
     display: flex;
-    align-items: center;
-    text-align: center; }
+    align-items: center; }
   header li {
     flex: 1;
-    padding: 30px;
-    font-size: 25px;
-    font-weight: 700; }
+    padding: 30px 20px;
+    font-size: 30px;
+    font-weight: 700;
+    cursor: pointer; }
 
-.light-bg {
+.light-bg,
+header li:hover {
+  color: #fff;
   box-shadow: 5px 5px 23px 3px rgba(127, 127, 127, 0.97);
+  background-color: #266150; }
+
+.flex {
+  justify-content: space-around; }
+
+p {
+  padding: 20px 0;
+  max-width: 400px;
+  color: #4f4846;
+  font-size: 40px;
+  line-height: 1.1; }
+
+h2 {
+  font-size: 40px;
+  font-weight: 600; }
+
+h3 {
+  margin: 30px 0;
+  font-size: 30px; }
+
+#content li {
+  margin: 5px 0;
+  font-size: 20px; }
+
+.contact h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  margin: 30px auto;
+  background-color: #fdf8f5;
+  border: 0.5px solid #ecd4d4;
+  border-radius: 2px;
+  cursor: pointer; }
+.contact h3:hover {
   background-color: #fff; }
+.contact i {
+  padding-right: 5px; }
+.contact a {
+  color: inherit; }
 
 /*# sourceMappingURL=style.css.map */

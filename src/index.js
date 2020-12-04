@@ -13,16 +13,19 @@ const contact = document.querySelector('.contact');
 // Event listeners for navigation
 const eventListeners = (() => {
   home.addEventListener('click', (e) => {
+    removeContent(e.target);
     loadHomePage()
     toggleBackground(e.target);
   })
 
   menu.addEventListener('click', (e) => {
-    loadMenuPage()
+    removeContent(e.target);
+    loadMenuPage();
     toggleBackground(e.target);
   })
 
   contact.addEventListener('click', (e) => {
+    removeContent(e.target);
     loadContactPage()
     toggleBackground(e.target);
   })
@@ -37,4 +40,12 @@ function toggleBackground(element) {
       tab.classList.remove('light-bg');
     }
   })
+}
+
+function removeContent(element) {
+  const content = document.querySelector('#content');
+  content.classList.remove(...content.classList);
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
+  }
 }
