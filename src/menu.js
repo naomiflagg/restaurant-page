@@ -1,12 +1,35 @@
 import addElement from './addElement'
 
 const createContent = () => {
+  addElement('h2', undefined, 'Menu');
   
-  
-  // const link = 'https://images.unsplash.com/photo-1502301103665-0b95cc738daf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80';
-  // addElement('img', undefined, undefined, 'src', link);
-  // addElement('h1', undefined, "Flagg's Fine Foods");
-  // addElement('p', undefined, 'Welcome to my restaurant!');
+  // Appetizers
+  addElement('h3', undefined, 'Appetizers', 'class', 'appetizers');
+  addMenuSections('appetizers', ['Tom Yum soup', 'Beetroot salad', 'Prawn crackers', 'Crab bisque']);
+
+  // Mains
+  addElement('h3', undefined, 'Mains', 'class', 'mains');
+  addMenuSections('mains', ['Spaghetti carbonara', 'Tofu and eggplant stirfry', 'Impossible burger', 'Pad see ew', 'Panang curry']);
+
+  // Sides 
+  addElement('h3', undefined, 'Sides', 'class', 'sides');
+  addMenuSections('sides', ['Brussel sprouts', 'Sweet potato fries', 'Garlic green beans'])
+
+  // Desserts
+  addElement('h3', undefined, 'Desserts', 'class', 'desserts');
+  addMenuSections('desserts', ['Lemon cheesecake', 'Blueberry crumble', 'Slice of Funfetti'])
+}
+
+const addMenuSections = (section, items) => {
+  let sectionList = `${section}List`
+  addElement('ul', `.${section}`, undefined, 'class', `${section}List`);
+  addMenuItems(sectionList, items);
+}
+
+const addMenuItems = (sectionList, items) => {
+  items.forEach(item => {
+    addElement('li', `.${sectionList}`, item)
+  })
 }
 
 const loadMenuPage = () => {
